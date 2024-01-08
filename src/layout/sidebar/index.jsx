@@ -16,54 +16,117 @@ import { MdElectricBolt } from "react-icons/md"; // Not same
 
 import { Button, IconButton, Link, Skeleton } from "@mui/material";
 import { IoIosArrowDown } from "react-icons/io";
+import { CiWallet } from "react-icons/ci";
+import AvatarImage from "../../assets/images/avatar.png";
 
 const Sidebar = ({ className }) => {
   const pages = [
-    { id: "0", title: "Home", reach: "/", icon: <GoHome /> },
-    { id: "1", title: "Orders", reach: "/orders", icon: <LuClipboardList /> },
-    { id: "2", title: "Products", reach: "/products", icon: <FiGrid /> },
-    { id: "3", title: "Delivery", reach: "/delivery", icon: <FiTruck /> },
-    { id: "4", title: "Marketing", reach: "/marketing", icon: <GoHome /> },
+    {
+      id: "0",
+      title: "Home",
+      reach: "/",
+      icon: <GoHome className="w-5 h-5" />,
+    },
+    {
+      id: "1",
+      title: "Orders",
+      reach: "/orders",
+      icon: <LuClipboardList className="w-5 h-5" />,
+    },
+    {
+      id: "2",
+      title: "Products",
+      reach: "/products",
+      icon: <FiGrid className="w-5 h-5" />,
+    },
+    {
+      id: "3",
+      title: "Delivery",
+      reach: "/delivery",
+      icon: <FiTruck className="w-5 h-5" />,
+    },
+    {
+      id: "4",
+      title: "Marketing",
+      reach: "/marketing",
+      icon: <GoHome className="w-5 h-5" />,
+    },
     {
       id: "5",
       title: "Analytics",
       reach: "/analytics",
-      icon: <PiChartBarLight />,
+      icon: <PiChartBarLight className="w-5 h-5" />,
     },
-    { id: "6", title: "Payments", reach: "/payments", icon: <MdPayments /> },
-    { id: "7", title: "Tools", reach: "/tools", icon: <LuMousePointer2 /> },
-    { id: "8", title: "Discounts", reach: "/discounts", icon: <TbDiscount2 /> },
-    { id: "9", title: "Audience", reach: "/audience", icon: <GoPeople /> },
+    {
+      id: "6",
+      title: "Payments",
+      reach: "/payments",
+      icon: <MdPayments className="w-5 h-5" />,
+    },
+    {
+      id: "7",
+      title: "Tools",
+      reach: "/tools",
+      icon: <LuMousePointer2 className="w-5 h-5" />,
+    },
+    {
+      id: "8",
+      title: "Discounts",
+      reach: "/discounts",
+      icon: <TbDiscount2 className="w-5 h-5" />,
+    },
+    {
+      id: "9",
+      title: "Audience",
+      reach: "/audience",
+      icon: <GoPeople className="w-5 h-5" />,
+    },
     {
       id: "10",
       title: "Appearance",
       reach: "/appearance",
-      icon: <MdOutlineColorLens />,
+      icon: <MdOutlineColorLens className="w-5 h-5" />,
     },
-    { id: "11", title: "Plugins", reach: "/plugins", icon: <MdElectricBolt /> },
+    {
+      id: "11",
+      title: "Plugins",
+      reach: "/plugins",
+      icon: <MdElectricBolt className="w-5 h-5" />,
+    },
   ];
 
   return (
     <aside
       className={`basis-1/6 flex flex-col justify-between bg-[#1e2640] ${className}`}
     >
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-2">
         <div className="flex flex-row gap-3 p-4">
-          <Skeleton
-            variant="rounded"
-            width={60}
-            height={60}
-            sx={{ background: "#ddd" }}
-          />
+          <div className="w-[39px] h-[39px] rounded-[4px] overflow-hidden items-center">
+            <img
+              src={AvatarImage}
+              alt="avatar"
+              className="w-full h-full object-cover"
+            />
+          </div>
           <div className="flex flex-row gap-2 justify-between w-full">
-            <div className="flex flex-col gap-2 justify-between">
-              <span className="text-xl text-[#fff]">Nishyan</span>
-              <Link sx={{ color: "#d2d4d9", "&:hover": { color: "#fff" } }}>
+            <div className="flex flex-col gap-1 justify-between">
+              <span className="text-[15px] font-medium leading-[22px] text-[#fff]">
+                Nishyan
+              </span>
+              <Link
+                sx={{
+                  color: "#d2d4d9",
+                  fontSize: "13px",
+                  lineHeight: "16px",
+                  fontWeight: "400",
+                  "&:hover": { color: "#fff" },
+                }}
+              >
                 Visit store
               </Link>
             </div>
             <IconButton>
-              <IoIosArrowDown className="text-[#fff]" />
+              <IoIosArrowDown className="text-[#fff] w-5 h-5" />
             </IconButton>
           </div>
         </div>
@@ -85,7 +148,7 @@ const Sidebar = ({ className }) => {
               >
                 <NavLink
                   to={page.reach}
-                  className="flex items-center gap-3 w-full"
+                  className=" w-full"
                   style={({ isActive }) => ({
                     display: "flex",
                     fontWeight: 500,
@@ -93,14 +156,32 @@ const Sidebar = ({ className }) => {
                     backgroundColor: isActive ? "#343c53" : "transparent",
                     color: isActive ? "#fff" : "#d2d4d9",
                     borderRadius: "6px",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    fontWeight: 500,
+                    alignItems: "center",
+                    gap: "12px",
                   })}
                 >
                   <div className="w-4 h-4">{page.icon}</div>
-                  <span>{page.title}</span>
+                  <span className="flex items-center">{page.title}</span>
                 </NavLink>
               </Button>
             );
           })}
+        </div>
+      </div>
+      <div className="flex flex-row gap-3 rounded-md bg-[#353c53] m-3 items-center p-4">
+        <div className="bg-[#494f64] w-9 h-9 p-[6px] rounded-[4px] bg-[#FFFFFF1A] flex">
+          <CiWallet className="w-[23.6px] h-[19.6px] text-[#fff] m-auto" />
+        </div>
+        <div className="flex flex-col">
+          <span className="text-[#FFFFFF] text-[13px] leading-[16px] font-normal">
+            Available credits
+          </span>
+          <span className="text-[#FFFFFF] text-[16px] leading-[24px] font-medium">
+            222.10
+          </span>
         </div>
       </div>
     </aside>
