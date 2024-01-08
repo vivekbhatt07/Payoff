@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { PageContainer } from "../../layout";
 
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
 import AdvancedFilterDemo from "./Table";
+import { TreeSelect } from "primereact/treeselect";
 
 export default function Dashboard() {
+  const [nodes, setNodes] = useState(["January"]);
+  const [selectedNodeKey, setSelectedNodeKey] = useState(null);
   const boxShadowCard = {
     boxShadow: "0 2px 6px 0 #1A181E0A",
   };
@@ -19,7 +20,15 @@ export default function Dashboard() {
             <span className="text-[20px] leading-[28px] font-medium text-[#1A181E]">
               Overview
             </span>
-            <div>Select input</div>
+            <div>
+              <TreeSelect
+                value={selectedNodeKey}
+                onChange={(e) => setSelectedNodeKey(e.value)}
+                options={nodes}
+                className="border border-[#D9D9D9] text-[16px] leading-[24px] text-[Last Month] text-[#4D4D4D]"
+                placeholder="Last Month"
+              ></TreeSelect>
+            </div>
           </div>
           {/* Body */}
           <div className="flex flex-row gap-5">

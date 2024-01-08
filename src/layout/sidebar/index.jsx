@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import { GoHome } from "react-icons/go";
 import { LuClipboardList } from "react-icons/lu";
@@ -14,17 +14,22 @@ import { GoPeople } from "react-icons/go";
 import { MdOutlineColorLens } from "react-icons/md";
 import { MdElectricBolt } from "react-icons/md"; // Not same
 
-import { Button, IconButton, Link, Skeleton } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import { IoIosArrowDown } from "react-icons/io";
 import { CiWallet } from "react-icons/ci";
 import AvatarImage from "../../assets/images/avatar.png";
+import AvatarTwoImage from "../../assets/images/avatarTwo.svg";
+import MarketingLogo from "../../assets/images/marketingLogo.svg";
+import PluginLogo from "../../assets/images/pluginLogo.svg";
+import PaymentLogo from "../../assets/images/paymentLogo.svg";
+import WalletLogo from "../../assets/images/walletLogo.svg";
 
 const Sidebar = ({ className }) => {
   const pages = [
     {
       id: "0",
       title: "Home",
-      reach: "/",
+      reach: "/home",
       icon: <GoHome className="w-5 h-5" />,
     },
     {
@@ -49,7 +54,7 @@ const Sidebar = ({ className }) => {
       id: "4",
       title: "Marketing",
       reach: "/marketing",
-      icon: <GoHome className="w-5 h-5" />,
+      icon: <img src={MarketingLogo} alt="marketing logo" />,
     },
     {
       id: "5",
@@ -60,8 +65,8 @@ const Sidebar = ({ className }) => {
     {
       id: "6",
       title: "Payments",
-      reach: "/payments",
-      icon: <MdPayments className="w-5 h-5" />,
+      reach: "/",
+      icon: <img src={PaymentLogo} alt="marketing logo" />,
     },
     {
       id: "7",
@@ -91,34 +96,37 @@ const Sidebar = ({ className }) => {
       id: "11",
       title: "Plugins",
       reach: "/plugins",
-      icon: <MdElectricBolt className="w-5 h-5" />,
+      icon: <img src={PluginLogo} alt="plugin logo" />,
     },
   ];
 
   return (
     <aside
-      className={`basis-1/6 flex flex-col justify-between bg-[#1e2640] ${className}`}
+      className={`basis-[224px] flex flex-col justify-between bg-[#1e2640] ${className}`}
     >
       <div className="flex flex-col gap-2">
-        <div className="flex flex-row gap-3 p-4">
-          <div className="w-[39px] h-[39px] rounded-[4px] overflow-hidden items-center">
+        <div className="flex flex-row gap-[12.5px] p-4">
+          <div className="w-[42px] h-[42px] rounded-[4px] overflow-hidden items-center">
             <img
-              src={AvatarImage}
+              src={AvatarTwoImage}
               alt="avatar"
-              className="w-full h-full object-cover"
+              className="w-[42px] h-[42px] object-cover"
             />
           </div>
-          <div className="flex flex-row gap-2 justify-between w-full">
+          <div className="flex flex-row gap-3 justify-between w-full">
             <div className="flex flex-col gap-1 justify-between">
               <span className="text-[15px] font-medium leading-[22px] text-[#fff]">
                 Nishyan
               </span>
               <Link
-                sx={{
+                style={{
                   color: "#d2d4d9",
                   fontSize: "13px",
                   lineHeight: "16px",
                   fontWeight: "400",
+                  color: "#FFFFFF",
+                  opacity: "0.8",
+                  borderBottom: "1px solid #fff",
                   "&:hover": { color: "#fff" },
                 }}
               >
@@ -130,7 +138,7 @@ const Sidebar = ({ className }) => {
             </IconButton>
           </div>
         </div>
-        <div className="px-2">
+        <div className="px-2 flex flex-col gap-1">
           {pages.map((page) => {
             return (
               <Button
@@ -152,7 +160,7 @@ const Sidebar = ({ className }) => {
                   style={({ isActive }) => ({
                     display: "flex",
                     fontWeight: 500,
-                    padding: "12px 24px",
+                    padding: "8px 16px",
                     backgroundColor: isActive ? "#343c53" : "transparent",
                     color: isActive ? "#fff" : "#d2d4d9",
                     borderRadius: "6px",
@@ -163,20 +171,18 @@ const Sidebar = ({ className }) => {
                     gap: "12px",
                   })}
                 >
-                  <div className="w-4 h-4">{page.icon}</div>
-                  <span className="flex items-center">{page.title}</span>
+                  {page.icon}
+                  <div className="flex items-center">{page.title}</div>
                 </NavLink>
               </Button>
             );
           })}
         </div>
       </div>
-      <div className="flex flex-row gap-3 rounded-md bg-[#353c53] m-3 items-center p-4">
-        <div className="bg-[#494f64] w-9 h-9 p-[6px] rounded-[4px] bg-[#FFFFFF1A] flex">
-          <CiWallet className="w-[23.6px] h-[19.6px] text-[#fff] m-auto" />
-        </div>
+      <div className="flex flex-row gap-3 rounded-md bg-[#353c53] m-3 items-center py-[6px] px-[12px]">
+        <img src={WalletLogo} alt="wallet logo" />
         <div className="flex flex-col">
-          <span className="text-[#FFFFFF] text-[13px] leading-[16px] font-normal">
+          <span className="text-[#FFFFFF] text-[13px] leading-[16px] font-normal opacity-80">
             Available credits
           </span>
           <span className="text-[#FFFFFF] text-[16px] leading-[24px] font-medium">
