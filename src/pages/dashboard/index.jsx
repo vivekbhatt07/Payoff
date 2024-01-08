@@ -1,6 +1,10 @@
 import React from "react";
 import { PageContainer } from "../../layout";
 
+import { DataTable } from "primereact/datatable";
+import { Column } from "primereact/column";
+import AdvancedFilterDemo from "./Table";
+
 export default function Dashboard() {
   const boxShadowCard = {
     boxShadow: "0 2px 6px 0 #1A181E0A",
@@ -46,7 +50,14 @@ export default function Dashboard() {
           </div>
         </div>
         {/* Transations */}
-        <div></div>
+        <div className="flex flex-col gap-5">
+          <h3 className="text-[20px] leading-[28px] font-medium">
+            Transactions | This Month
+          </h3>
+          <div>
+            <AdvancedFilterDemo />
+          </div>
+        </div>
       </div>
     </PageContainer>
   );
