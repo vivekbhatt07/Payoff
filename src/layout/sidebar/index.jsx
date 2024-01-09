@@ -24,6 +24,8 @@ import PluginLogo from "../../assets/images/pluginLogo.svg";
 import PaymentLogo from "../../assets/images/paymentLogo.svg";
 import WalletLogo from "../../assets/images/walletLogo.svg";
 
+import { MdHomeFilled } from "react-icons/md";
+
 const Sidebar = ({ className }) => {
   const pages = [
     {
@@ -31,6 +33,7 @@ const Sidebar = ({ className }) => {
       title: "Home",
       reach: "/home",
       icon: <GoHome className="w-5 h-5" />,
+      filled: <MdHomeFilled className="w-5 h-5" />,
     },
     {
       id: "1",
