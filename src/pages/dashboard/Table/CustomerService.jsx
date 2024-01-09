@@ -18,6 +18,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 2000,
@@ -36,6 +37,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 3000,
@@ -54,6 +56,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 4000,
@@ -72,6 +75,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 5000,
@@ -90,6 +94,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 1,
@@ -108,6 +113,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 2,
@@ -126,6 +132,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 3,
@@ -144,6 +151,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 4,
@@ -162,6 +170,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 5,
@@ -180,6 +189,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 6,
@@ -198,6 +208,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 7,
@@ -216,6 +227,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 8,
@@ -234,6 +246,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 9,
@@ -252,6 +265,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 10,
@@ -270,6 +284,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 11,
@@ -288,6 +303,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 12,
@@ -306,6 +322,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 13,
@@ -324,6 +341,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 14,
@@ -342,6 +360,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 15,
@@ -360,6 +379,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
       {
         id: 16,
@@ -378,6 +398,7 @@ export const CustomerService = {
           image: "ionibowcher.png",
         },
         balance: 1278.23,
+        fee: 22,
       },
     ];
   },

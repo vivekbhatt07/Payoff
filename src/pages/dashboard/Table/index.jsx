@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./index.css";
 import { FilterMatchMode, FilterOperator } from "primereact/api";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
@@ -152,6 +153,10 @@ export default function AdvancedFilterDemo() {
     return formatCurrency(rowData.balance);
   };
 
+  const feesBodyTemplate = (rowData) => {
+    return formatCurrency(rowData.fee);
+  };
+
   const balanceFilterTemplate = (options) => {
     return (
       <InputNumber
@@ -169,6 +174,7 @@ export default function AdvancedFilterDemo() {
   return (
     <div className="card">
       <DataTable
+        tableStyle={{ minWidth: "50rem" }}
         paginatorTemplate={{
           layout: "PrevPageLink PageLinks NextPageLink",
           PrevPageLink: (options) => {
@@ -188,6 +194,8 @@ export default function AdvancedFilterDemo() {
                   lineHeight: "20px",
                   fontWeight: 500,
                   color: "#4D4D4D",
+                  marginRight: "24px",
+                  height: "32px",
                 }}
               >
                 <IoChevronBackOutline />
@@ -214,6 +222,8 @@ export default function AdvancedFilterDemo() {
                   fontWeight: 500,
                   color: "#4D4D4D",
                   alignItems: "center",
+                  marginLeft: "24px",
+                  height: "32px",
                 }}
               >
                 <span>Next</span>
@@ -234,7 +244,10 @@ export default function AdvancedFilterDemo() {
               });
 
               return (
-                <span className={className} style={{ userSelect: "none" }}>
+                <span
+                  className={className}
+                  style={{ userSelect: "none", width: "28px", height: "28px" }}
+                >
                   ...
                 </span>
               );
@@ -245,7 +258,21 @@ export default function AdvancedFilterDemo() {
                 type="button"
                 className={options.className}
                 onClick={options.onClick}
-                style={{ backgroundColor: "#aaa" }}
+                style={{
+                  fontSize: "14px",
+                  lineHeight: "20px",
+                  fontWeight:
+                    options.currentPage == options.page ? "500" : "400",
+                  color:
+                    options.currentPage == options.page ? "#fff" : "#4D4D4D",
+                  height: "28px",
+                  width: "28px",
+                  borderRadius: "4px",
+                  backgroundColor:
+                    options.currentPage == options.page
+                      ? "#146EB4"
+                      : "transparent",
+                }}
               >
                 {options.page + 1}
                 <Ripple />
@@ -389,7 +416,7 @@ export default function AdvancedFilterDemo() {
             marginRight: "12px",
             display: "flex",
           }}
-          body={balanceBodyTemplate}
+          body={feesBodyTemplate}
           filterElement={balanceFilterTemplate}
         />
       </DataTable>
