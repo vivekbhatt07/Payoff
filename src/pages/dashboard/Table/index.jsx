@@ -174,6 +174,7 @@ export default function AdvancedFilterDemo() {
   return (
     <div className="card">
       <DataTable
+        tableStyle={{ borderCollapse: "unset" }}
         paginatorTemplate={{
           layout: "PrevPageLink PageLinks NextPageLink",
           PrevPageLink: (options) => {
@@ -287,7 +288,7 @@ export default function AdvancedFilterDemo() {
         value={customers}
         paginator
         showGridlines
-        rows={2}
+        rows={8}
         loading={loading}
         dataKey="id"
         filters={filters}
