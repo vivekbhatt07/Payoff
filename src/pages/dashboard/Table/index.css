@@ -14,3 +14,7 @@
 .p-paginator {
   padding-top: 24px;
 }
+
+.p-column-title {
+  width: 100%;
+}

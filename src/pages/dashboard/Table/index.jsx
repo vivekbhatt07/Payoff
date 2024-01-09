@@ -46,8 +46,8 @@ export default function AdvancedFilterDemo() {
 
   const formatDate = (value) => {
     return value.toLocaleDateString("en-US", {
-      day: "2-digit",
-      month: "2-digit",
+      day: "numeric",
+      month: "long",
       year: "numeric",
     });
   };
@@ -324,14 +324,12 @@ export default function AdvancedFilterDemo() {
           }}
           style={{ minWidth: "12rem" }}
           bodyStyle={{
-            color: "#146EB4",
-            paddingTop: "14px",
-            paddingBottom: "14px",
             borderBottom: "1px solid #E6E6E6",
             fontSize: "14px",
             lineHeight: "20px",
             fontWeight: 500,
             paddingLeft: 0,
+            color: "#146EB4",
             margin: "0",
             marginLeft: "12px",
             display: "flex",
@@ -368,7 +366,7 @@ export default function AdvancedFilterDemo() {
         />
         <Column
           header={
-            <div className="flex gap-1 flex-row items-center">
+            <div className="flex gap-1 flex-row items-center justify-end">
               <span className="text-[14px] text-[#4D4D4D] leading-[20px] font-medium">
                 Order amount
               </span>
@@ -385,13 +383,14 @@ export default function AdvancedFilterDemo() {
             fontSize: "14px",
             lineHeight: "20px",
             fontWeight: 400,
+            textAlign: "right",
           }}
           body={balanceBodyTemplate}
           filterElement={balanceFilterTemplate}
         />
         <Column
           header={
-            <div className="flex gap-1 flex-row items-center">
+            <div className="flex gap-1 flex-row items-center justify-end">
               <span className="text-[14px] text-[#4D4D4D] leading-[20px] font-medium">
                 Transaction fees
               </span>
@@ -415,6 +414,7 @@ export default function AdvancedFilterDemo() {
             margin: "0",
             marginRight: "12px",
             display: "flex",
+            justifyContent: "flex-end",
           }}
           body={feesBodyTemplate}
           filterElement={balanceFilterTemplate}
