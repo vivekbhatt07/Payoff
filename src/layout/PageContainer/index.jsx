@@ -128,7 +128,7 @@ const PageContainer = ({ children }) => {
     <div className="dark:bg-900 dark:text-50 transition-all duration-300 xl:h-screen">
       <div className="flex flex-row relative xl:h-screen">
         <Sidebar className="hidden lg:flex" />
-        <div className="fixed bottom-5 left-5 flex lg:hidden z-10 bg-[#ddd] rounded-full items-center">
+        <div className="fixed bottom-5 left-5 flex lg:hidden z-10 bg-[#146eb4] rounded-full items-center">
           <div>
             <IconButton
               className="w-12 h-12"
@@ -137,7 +137,7 @@ const PageContainer = ({ children }) => {
               aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
             >
-              <IoEllipsisHorizontalCircle className="w-12 h-12" />
+              <IoEllipsisHorizontalCircle className="w-12 h-12 text-[#fff]" />
             </IconButton>
             <Menu
               id="basic-menu"
@@ -198,7 +198,7 @@ const PageContainer = ({ children }) => {
               aria-expanded={open2 ? "true" : undefined}
               onClick={handleClick2}
             >
-              <FaRegUserCircle className="w-7 h-7" />
+              <FaRegUserCircle className="w-7 h-7 text-[#fff]" />
             </IconButton>
             <Menu
               id="basic-menu2"
