@@ -26,7 +26,7 @@ const MainHead = () => {
         />
 
         <input
-          className="bg-[#F2F2F2] rounded-[6px] py-[9px] pl-[40px] pr-[16px] w-[400px] text-[15px] leading-[22px] font-normal text-[#808080]"
+          className="bg-[#F2F2F2] rounded-[6px] py-[9px] pl-[40px] pr-[16px] sm:w-[400px] text-[15px] leading-[22px] font-normal text-[#808080]"
           placeholder="Search features, tutorials, etc."
         />
       </div>

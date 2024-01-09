@@ -125,8 +125,8 @@ const PageContainer = ({ children }) => {
     },
   ];
   return (
-    <div className="dark:bg-900 dark:text-50 transition-all duration-300 h-screen">
-      <div className="flex flex-row relative h-screen">
+    <div className="dark:bg-900 dark:text-50 transition-all duration-300 xl:h-screen">
+      <div className="flex flex-row relative xl:h-screen">
         <Sidebar className="hidden lg:flex" />
         <div className="absolute bottom-5 left-5 flex lg:hidden">
           <div>

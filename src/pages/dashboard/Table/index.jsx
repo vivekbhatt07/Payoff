@@ -101,7 +101,7 @@ export default function AdvancedFilterDemo() {
 
   const renderHeader = () => {
     return (
-      <div className="flex justify-between">
+      <div className="flex flex-col gap-2 sm:justify-between sm:flex-row">
         <div className="relative">
           <img
             src={SearchLogo}
@@ -110,13 +110,13 @@ export default function AdvancedFilterDemo() {
           />
 
           <input
-            className="bg-[##FFFFFF] rounded-[4px] py-[10px] pl-[38px] pr-[16px] w-[400px] text-[14px] leading-[20px] font-normal text-[#808080] border border-[#D9D9D9] max-w-[248px]"
+            className="bg-[##FFFFFF] rounded-[4px] py-[10px] pl-[38px] pr-[16px] lg:w-[400px] text-[14px] leading-[20px] font-normal text-[#808080] border border-[#D9D9D9] sm:max-w-[248px] w-full"
             value={globalFilterValue}
             onChange={onGlobalFilterChange}
             placeholder="Search by order ID..."
           />
         </div>
-        <div className="flex flex-row gap-3">
+        <div className="flex flex-row gap-3 justify-between sm:justify-start">
           <OutlineButton className="py-[6px] px-3">
             <div className="flex items-center gap-[6px]">
               <span className="text-[16px] leading-[24px] font-normal text-[#4D4D4D]">
@@ -194,7 +194,7 @@ export default function AdvancedFilterDemo() {
                   lineHeight: "20px",
                   fontWeight: 500,
                   color: "#4D4D4D",
-                  marginRight: "24px",
+
                   height: "32px",
                 }}
               >
@@ -222,7 +222,7 @@ export default function AdvancedFilterDemo() {
                   fontWeight: 500,
                   color: "#4D4D4D",
                   alignItems: "center",
-                  marginLeft: "24px",
+
                   height: "32px",
                 }}
               >
