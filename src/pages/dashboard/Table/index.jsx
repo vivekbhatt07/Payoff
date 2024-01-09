@@ -330,7 +330,7 @@ export default function AdvancedFilterDemo() {
             paddingLeft: 0,
             color: "#146EB4",
             margin: "0",
-            marginLeft: "12px",
+            borderLeft: "24px solid #fff",
           }}
         />
 
@@ -359,6 +359,7 @@ export default function AdvancedFilterDemo() {
             lineHeight: "20px",
             fontWeight: 400,
             color: "#1A181E",
+            paddingLeft: "12px",
           }}
           body={dateBodyTemplate}
           filterElement={dateFilterTemplate}
@@ -384,6 +385,7 @@ export default function AdvancedFilterDemo() {
             fontWeight: 400,
             textAlign: "right",
             color: "#1A181E",
+            paddingRight: "12px",
           }}
           body={balanceBodyTemplate}
           filterElement={balanceFilterTemplate}
@@ -412,7 +414,7 @@ export default function AdvancedFilterDemo() {
             fontWeight: 400,
             paddingRight: 0,
             margin: "0",
-            marginRight: "12px",
+            borderRight: "24px solid #fff",
             textAlign: "right",
             color: "#1A181E",
           }}

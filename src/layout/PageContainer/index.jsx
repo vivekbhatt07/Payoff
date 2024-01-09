@@ -136,6 +136,11 @@ const PageContainer = ({ children }) => {
               aria-haspopup="true"
               aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
+              sx={{
+                "&:hover": {
+                  background: "#0ea5e9",
+                },
+              }}
             >
               <IoEllipsisHorizontalCircle className="w-12 h-12 text-[#fff]" />
             </IconButton>
@@ -197,6 +202,11 @@ const PageContainer = ({ children }) => {
               aria-haspopup="true"
               aria-expanded={open2 ? "true" : undefined}
               onClick={handleClick2}
+              sx={{
+                "&:hover": {
+                  background: "#0ea5e9",
+                },
+              }}
             >
               <FaRegUserCircle className="w-7 h-7 text-[#fff]" />
             </IconButton>
