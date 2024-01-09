@@ -16,7 +16,7 @@ export default function Dashboard() {
         {/* Overview */}
         <div className="flex flex-col gap-6">
           {/* Head */}
-          <div className="flex flex-row justify-between items-center">
+          <div className="flex flex-row flex-start gap-4 md:justify-between items-center md:gap-0">
             <span className="text-[20px] leading-[28px] font-medium text-[#1A181E]">
               Overview
             </span>
@@ -31,7 +31,7 @@ export default function Dashboard() {
             </div>
           </div>
           {/* Body */}
-          <div className="flex flex-row gap-5">
+          <div className="flex flex-col md:flex-row gap-5">
             {/* Card One */}
             <div
               className="flex flex-col p-5 gap-4 bg-[#FFFFFF] outline rounded-[8px] basis-1/2"

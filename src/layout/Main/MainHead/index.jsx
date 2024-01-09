@@ -6,7 +6,7 @@ import DownArrowRoundedLogo from "../../../assets/images/downArrowRoundedLogo.sv
 import SearchLogo from "../../../assets/images/searchLogo.svg";
 const MainHead = () => {
   return (
-    <div className="flex py-3 px-8 justify-between bg-[#FFFFFF] border-b border-[#D9D9D9]">
+    <div className="flex py-3 px-8 bg-[#FFFFFF] border-b border-[#D9D9D9] flex-col gap-4 md:flex-row md:justify-between md:gap-0">
       <div className="flex flex-row gap-4 items-center">
         <h3 className="text-[15px] leading-[22px] font-normal text-[#1A181E]">
           Payments
