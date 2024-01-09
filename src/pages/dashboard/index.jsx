@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PageContainer } from "../../layout";
 
 import AdvancedFilterDemo from "./Table";
 import { TreeSelect } from "primereact/treeselect";
+import { NodeService } from "./NodeService";
 
 export default function Dashboard() {
-  const [nodes, setNodes] = useState(["January"]);
+  const [nodes, setNodes] = useState(null);
   const [selectedNodeKey, setSelectedNodeKey] = useState(null);
+
+  useEffect(() => {
+    NodeService.getTreeNodes().then((data) => setNodes(data));
+  }, []);
   const boxShadowCard = {
     boxShadow: "0 2px 6px 0 #1A181E0A",
+  };
+
+  const breakStyle = {
+    wordWrap: "break-word",
   };
   return (
     <PageContainer>
@@ -37,10 +46,16 @@ export default function Dashboard() {
               className="flex flex-col p-5 gap-4 bg-[#FFFFFF] rounded-[8px] basis-1/2"
               style={boxShadowCard}
             >
-              <span className="text-[16px] text-[#4D4D4D] font-normal leading-[24px]">
+              <span
+                className="text-[16px] text-[#4D4D4D] font-normal leading-[24px]"
+                style={breakStyle}
+              >
                 Online orders
               </span>
-              <span className="text-[32px] text-[#1A181E] font-medium leading-[38px]">
+              <span
+                className="text-[32px] text-[#1A181E] font-medium leading-[38px]"
+                style={breakStyle}
+              >
                 231
               </span>
             </div>
@@ -49,10 +64,16 @@ export default function Dashboard() {
               className="flex flex-col p-5 gap-4 bg-[#FFFFFF] rounded-[8px] basis-1/2"
               style={boxShadowCard}
             >
-              <span className="text-[16px] text-[#4D4D4D] font-normal leading-[24px]">
+              <span
+                className="text-[16px] text-[#4D4D4D] font-normal leading-[24px]"
+                style={breakStyle}
+              >
                 Amount received
               </span>
-              <span className="text-[32px] text-[#1A181E] font-medium leading-[38px]">
+              <span
+                className="text-[32px] text-[#1A181E] font-medium leading-[38px]"
+                style={breakStyle}
+              >
                 ₹23,92,312.19
               </span>
             </div>
