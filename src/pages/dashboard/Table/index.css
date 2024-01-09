@@ -24,3 +24,21 @@
   padding: 0;
   padding-bottom: 12px;
 }
+
+.p-treeselect-label {
+  padding: 6px 0 6px 14px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #4d4d4d;
+}
+
+.p-treeselect-trigger {
+  width: 2rem;
+}
+
+.p-treeselect-trigger svg {
+  width: 16px;
+  height: 16px;
+  color: #4d4d4d;
+}

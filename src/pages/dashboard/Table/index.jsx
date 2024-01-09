@@ -174,7 +174,7 @@ export default function AdvancedFilterDemo() {
   return (
     <div className="card">
       <DataTable
-        tableStyle={{ minWidth: "50rem" }}
+        // tableStyle={{ minWidth: "50rem" }}
         paginatorTemplate={{
           layout: "PrevPageLink PageLinks NextPageLink",
           PrevPageLink: (options) => {
@@ -288,7 +288,7 @@ export default function AdvancedFilterDemo() {
         value={customers}
         paginator
         showGridlines
-        rows={1}
+        rows={2}
         loading={loading}
         dataKey="id"
         filters={filters}
@@ -322,7 +322,7 @@ export default function AdvancedFilterDemo() {
             padding: "10px 12px",
             borderRadius: "4px 0 0 4px",
           }}
-          style={{ minWidth: "12rem" }}
+          // style={{ minWidth: "12rem" }}
           bodyStyle={{
             borderBottom: "1px solid #E6E6E6",
             fontSize: "14px",
@@ -351,7 +351,7 @@ export default function AdvancedFilterDemo() {
           headerStyle={{ backgroundColor: "#F2F2F2", padding: "10px 12px" }}
           filterField="date"
           dataType="date"
-          style={{ minWidth: "10rem" }}
+          // style={{ minWidth: "10rem" }}
           bodyStyle={{
             paddingTop: "14px",
             paddingBottom: "14px",
@@ -359,6 +359,7 @@ export default function AdvancedFilterDemo() {
             fontSize: "14px",
             lineHeight: "20px",
             fontWeight: 400,
+            color: "#1A181E",
           }}
           body={dateBodyTemplate}
           filterElement={dateFilterTemplate}
@@ -374,7 +375,7 @@ export default function AdvancedFilterDemo() {
           headerStyle={{ backgroundColor: "#F2F2F2", padding: "10px 12px" }}
           filterField="balance"
           dataType="numeric"
-          style={{ minWidth: "10rem" }}
+          // style={{ minWidth: "10rem" }}
           bodyStyle={{
             paddingTop: "14px",
             paddingBottom: "14px",
@@ -383,6 +384,7 @@ export default function AdvancedFilterDemo() {
             lineHeight: "20px",
             fontWeight: 400,
             textAlign: "right",
+            color: "#1A181E",
           }}
           body={balanceBodyTemplate}
           filterElement={balanceFilterTemplate}
@@ -403,7 +405,7 @@ export default function AdvancedFilterDemo() {
           }}
           filterField="balance"
           dataType="numeric"
-          style={{ minWidth: "10rem" }}
+          // style={{ minWidth: "10rem" }}
           bodyStyle={{
             borderBottom: "1px solid #E6E6E6",
             fontSize: "14px",
@@ -413,6 +415,7 @@ export default function AdvancedFilterDemo() {
             margin: "0",
             marginRight: "12px",
             textAlign: "right",
+            color: "#1A181E",
           }}
           body={feesBodyTemplate}
           filterElement={balanceFilterTemplate}
