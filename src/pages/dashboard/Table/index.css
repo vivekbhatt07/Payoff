@@ -18,3 +18,9 @@
 .p-column-title {
   width: 100%;
 }
+
+.p-datatable-header {
+  background-color: #fff;
+  padding: 0;
+  padding-bottom: 12px;
+}

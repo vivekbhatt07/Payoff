@@ -34,7 +34,7 @@ export default function Dashboard() {
           <div className="flex flex-col md:flex-row gap-5">
             {/* Card One */}
             <div
-              className="flex flex-col p-5 gap-4 bg-[#FFFFFF] outline rounded-[8px] basis-1/2"
+              className="flex flex-col p-5 gap-4 bg-[#FFFFFF] rounded-[8px] basis-1/2"
               style={boxShadowCard}
             >
               <span className="text-[16px] text-[#4D4D4D] font-normal leading-[24px]">
@@ -46,7 +46,7 @@ export default function Dashboard() {
             </div>
             {/* Card Two */}
             <div
-              className="flex flex-col p-5 gap-4 bg-[#FFFFFF] outline rounded-[8px] basis-1/2"
+              className="flex flex-col p-5 gap-4 bg-[#FFFFFF] rounded-[8px] basis-1/2"
               style={boxShadowCard}
             >
               <span className="text-[16px] text-[#4D4D4D] font-normal leading-[24px]">

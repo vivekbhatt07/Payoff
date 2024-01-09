@@ -332,7 +332,6 @@ export default function AdvancedFilterDemo() {
             color: "#146EB4",
             margin: "0",
             marginLeft: "12px",
-            display: "flex",
           }}
         />
 
@@ -413,8 +412,7 @@ export default function AdvancedFilterDemo() {
             paddingRight: 0,
             margin: "0",
             marginRight: "12px",
-            display: "flex",
-            justifyContent: "flex-end",
+            textAlign: "right",
           }}
           body={feesBodyTemplate}
           filterElement={balanceFilterTemplate}

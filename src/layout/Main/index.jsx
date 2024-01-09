@@ -5,7 +5,7 @@ const Main = ({ children }) => {
   return (
     <div className="basis-full flex flex-col">
       <MainHead />
-      <div className="p-8">{children}</div>
+      <div className="p-8 bg-[#fafafa] h-full">{children}</div>
     </div>
   );
 };
