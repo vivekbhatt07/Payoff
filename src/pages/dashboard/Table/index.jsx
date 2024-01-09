@@ -174,7 +174,6 @@ export default function AdvancedFilterDemo() {
   return (
     <div className="card">
       <DataTable
-        // tableStyle={{ minWidth: "50rem" }}
         paginatorTemplate={{
           layout: "PrevPageLink PageLinks NextPageLink",
           PrevPageLink: (options) => {
